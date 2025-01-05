@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(64, 109, 255, 0.7), rgba(0, 219, 255, 0.7)),
+                url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center fixed;
+    background-size: cover;
+    animation: gradientBG 15s ease infinite;
+    transition: background 1s ease, color 0.3s ease;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.stopwatch-container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.clock {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f9f9f9, #e0e0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    border: 5px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.time-display {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #333;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.controls button {
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: #007bff;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.lap-times {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 150px;
+    overflow-y: auto;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lap-times h2 {
+    color: #555;
+}
+
+.lap-times ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lap-times li {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    color: #333;
+    animation: fadeIn 0.5s ease;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mode-toggle:hover {
+    background: #555;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    color: #fff;
+}
+
+body.dark-mode .stopwatch-container {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode .mode-toggle {
+    background: #fff;
+    color: #333;
+}
+
+body.dark-mode .mode-toggle:hover {
+    background: #ccc;
+}
+
+body.dark-mode .clock {
+    background: radial-gradient(circle, #444, #333);
+    border: 5px solid #555;
+}
+
+body.dark-mode .time-display {
+    color: #fff;
+}
+
+body.dark-mode .controls button {
+    background: #555;
+    color: #fff;
+}
+
+body.dark-mode .controls button:hover {
+    background: #777;
+}
+
+body.dark-mode .lap-times {
+    color: #fff;
+}
+
+body.dark-mode .lap-times li {
+    color: #fff;
+}
+
+/* Cool Blue Mode Styling */
+body.cool-blue {
+    background: linear-gradient(135deg, rgba(0, 219, 255, 0.7), rgba(0, 169, 255, 0.7));
+}
+
+body.cool-blue .stopwatch-container {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.cool-blue .mode-toggle {
+    background: #00a9ff;
+    color: #fff;
+}
+
+body.cool-blue .mode-toggle:hover {
+    background: #007bb5;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.progress-bar-fill {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}

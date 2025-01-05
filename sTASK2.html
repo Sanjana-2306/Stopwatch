@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A stylish stopwatch web app with lap recording functionality">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="stopwatch, timer, web app, lap timer, productivity">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2933/2933072.png" type="image/png">
+    <title>Stopwatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <button class="mode-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+        <h1>Stopwatch</h1>
+        <div id="clock" class="clock">
+            <div id="time" class="time-display">00:00:00</div>
+        </div>
+        <div class="controls">
+            <button id="startStop" onclick="toggleStartStop()">Start</button>
+            <button id="reset" onclick="resetStopwatch()">Reset</button>
+            <button id="lap" onclick="recordLap()">Lap</button>
+        </div>
+        <div id="lap-times" class="lap-times">
+            <h2>Laps:</h2>
+            <ul id="lap-list"></ul>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
