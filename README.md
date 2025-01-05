@@ -6,7 +6,8 @@ A simple, interactive stopwatch web application built using HTML, CSS, and JavaS
 1.**Start/Stop functionality**: Start and pause the stopwatch with a button click.
 2.**Reset functionality**: Reset the stopwatch to zero with a button click.
 3.**Lap time tracking**: Record lap times and display them in a list.
-4.**Neon theme**: The app has a visually appealing, neon-themed design.
+4.**simple modern classic theme**: The app has a visually appealing, simple modern classic themed design.
+5.**light/dark mode**:This mode has two modes.
 
 **Technologies Used:**
 
